@@ -66,8 +66,9 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
+              aria-expanded={isOpen}
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">Otevřít hlavní menu</span>
               {isOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
@@ -119,12 +120,21 @@ const Footer = () => {
               className="h-12 bg-white p-2 rounded mb-6 grayscale hover:grayscale-0 transition-all"
             />
             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-              Diskrétnost, profesionalita a efektivnost. Nabízíme detektivní služby soukromým osobám,
-              firmám i právním subjektům.
+              Diskrétnost, profesionalita a efektivnost. Nabízíme detektivní služby soukromým osobám, firmám i právním kancelářím.
             </p>
-            <div className="flex items-center gap-2 text-gray-300">
-              <Shield className="w-4 h-4 text-gray-500" />
-              <span className="text-sm">Člen Českého Klubu Bezpečnostních Služeb</span>
+            <div className="flex flex-col gap-3 text-gray-300">
+              <div className="flex items-start gap-2">
+                <Shield className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" />
+                <span className="text-sm">Člen Českého Klubu Bezpečnostních Služeb</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Shield className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" />
+                <span className="text-sm">čestný člen České komory detektivních služeb</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <Shield className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" />
+                <span className="text-sm">člen bezpečnostní sekce Hospodářské komory ČR</span>
+              </div>
             </div>
           </div>
           

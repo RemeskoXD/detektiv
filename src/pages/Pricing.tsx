@@ -16,11 +16,11 @@ export default function Pricing() {
             <div className="bg-gray-50 border border-gray-100 rounded-3xl p-8 sm:p-12 mb-12 shadow-sm">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
                 <div>
-                  <h3 className="text-3xl font-serif mb-2 mt-0">Hodinová sazba</h3>
+                  <h2 className="text-3xl font-serif mb-2 mt-0">Hodinová sazba</h2>
                   <p className="text-gray-600 m-0">je odstupňována dle náročnosti poskytovaných služeb.</p>
                 </div>
                 <div className="text-right">
-                  <span className="text-sm font-bold uppercase tracking-widest text-gray-500 block mb-1">Cena začíná na</span>
+                  <span className="text-sm font-bold uppercase tracking-widest text-gray-500 block mb-1">Cena začíná zpravidla na</span>
                   <span className="text-5xl font-serif text-ink flex items-baseline gap-2">
                     500 <span className="text-2xl text-gray-500">Kč</span>
                   </span>
@@ -28,7 +28,7 @@ export default function Pricing() {
               </div>
               <div className="w-full h-px bg-gray-200 my-8"></div>
               <p className="m-0 text-gray-700 text-base leading-relaxed">
-                Vždy záleží na dohodě s Vámi, přičemž je třeba vzít v úvahu, že výši odměny, vedle jiných specifických okolností, ovlivňuje i míra rizika, podstupovaného při plnění Vašeho zadání.
+                Vždy však záleží na dohodě s Vámi, při čemž je třeba vzít v úvahu, že výši odměny, vedle jiných specifických okolností, ovlivňuje především míra rizika, podstupovaného při plnění Vašeho zadání.
               </p>
             </div>
 

@@ -10,23 +10,23 @@ export default function About() {
         <div className="bg-white rounded-[2rem] shadow-sm border border-gray-100 p-8 sm:p-12 md:p-16">
           <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-ink prose-p:text-gray-800 prose-p:leading-relaxed">
             <p className="text-2xl text-ink font-medium mb-12 leading-relaxed">
-              V oboru komerční bezpečnosti a detektivních služeb pracuji od roku 1992, a to v oblasti vyhledávání a monitorování osob, majetku, zjišťování informací a získávání důkazního materiálu.
+              V oboru komerční bezpečnosti a detektivních služeb pracuji od roku 1992. Začínal jsem nejprve jako zaměstnanec, od roku 1995 už pracuji jako osvč. Hlavní náplní mé činností je vyhledávání a monitorování osob, majetku, zjišťování informací a získávání důkazního materiálu.
             </p>
             
             <p>
-              Včetně jejich vyhodnocování, analýzy a zpracování pro klienty ve formě podkladů ke zpracování různých výstupů (žaloby, trestní oznámení, atp.). Získal jsem také zkušenosti v oblasti ostrahy objektů se služebními psy, osobní ochrany, převozů cenností a finanční hotovosti.
+              V oboru komerční bezpečnosti, jsem získal bohaté zkušenosti v oblasti ostrahy objektů se služebními psy, při poskytování služeb osobní ochrany, a také převozů cenností a finanční hotovosti.
             </p>
 
             <p>
-              V kooperaci s kolegy prověřenými dlouholetou spoluprací, poskytujeme detektivní a bezpečnostní služby advokátním kancelářím, obchodním společnostem, fyzickým osobám i jednotlivcům a jsme schopni v rámci spolupráce s vybranými kolegy uspokojit téměř jakoukoliv poptávku, a to jak v České republice, tak i v zahraničí.
+              V roce 2005 jsem se stal členem profesního sdružení Česká komora detektivních služeb. V současné době jsem také členem Českého klubu bezpečnostních služeb, kde pracuji v prezidiu, jako hospodář a vedoucí sekce detektivové. Působím zároveň v Hospodářské komoře ČR, jako člen bezpečnostní sekce a vedoucí pracovní skupiny detektivové.
             </p>
 
             <p>
-              Postupujeme v rámci zákona a s maximální snahou o diskrétnost. Od roku 2005 jsem členem profesního sdružení Česká komora detektivních služeb, kde vykonávám funkci regionálního zmocněnce pro Olomoucký kraj.
+              V kooperaci s kolegy prověřenými dlouholetou spoluprací, poskytujeme detektivní a bezpečnostní služby advokátním kancelářím, obchodním společnostem, fyzickým osobám i jednotlivcům a jsme schopni v rámci spolupráce s vybranými kolegy uspokojit téměř jakoukoliv poptávku, a to jak v České republice, tak i v zahraničí. Při provádění úkonů postupujeme v rámci zákona a s maximální snahou o diskrétnost.
             </p>
 
             <p>
-              Tuto profesi jsem si zvolil především proto, že se v ní mohu realizovat jako samostatně se rozvíjející subjekt, mající možnost komunikovat s lidmi a pomáhat jim řešit složité situace. Na mé práci mne nejvíce baví její různorodost a také možnost nezávisle se rozhodovat co budu dělat a pro koho.
+              Profesi soukromého detektiva jsem si zvolil, kromě jiného, proto, že se v ní mohu realizovat, jako osoba mající možnost komunikovat s lidmi, a pomáhat jim řešit složité situace. Na mé práci mne nejvíce baví její různorodost, a také možnost se nezávisle rozhodovat co, kdy, kde, jak, čím, proč a především pro koho, budu pracovat.
             </p>
 
             <p>
@@ -34,7 +34,7 @@ export default function About() {
             </p>
             
             <div className="mt-16 pt-12 border-t border-gray-200">
-              <h3 className="text-2xl font-serif mb-4 text-ink">Vladimír Lakomý</h3>
+              <h2 className="text-2xl font-serif mb-4 text-ink">Vladimír Lakomý</h2>
               <p className="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">
                 člen prezídia Českého Klubu Bezpečnostních Služeb z.s.
               </p>

@@ -76,7 +76,7 @@ export default function Presentation() {
                   {cert.icon}
                 </div>
               </a>
-              <h3 className="text-2xl font-serif mb-3 leading-tight text-ink">{cert.title}</h3>
+              <h2 className="text-2xl font-serif mb-3 leading-tight text-ink">{cert.title}</h2>
               <p className="text-gray-700 text-lg leading-relaxed flex-grow">{cert.description}</p>
             </div>
           ))}

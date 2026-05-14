@@ -16,11 +16,11 @@ export default function Home() {
               Detektivní Agentura
             </span>
             <h1 className="text-6xl sm:text-7xl lg:text-8xl font-serif text-ink mb-6 tracking-tight leading-[0.9]">
-              Důvěřuj, prověřuj,<br /> 
-              <span className="text-gray-400 italic">předcházej.</span>
+              Důvěřuj, Prověřuj,<br /> 
+              <span className="text-gray-400 italic">PŘEDCHÁZEJ.</span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-800 mb-10 max-w-2xl leading-relaxed">
-              Diskrétnost, profesionalita a efektivnost. Nabízíme detektivní služby soukromým osobám, firmám i právním subjektům s působností více než 30 let.
+              Diskrétnost, profesionalita a efektivnost. Nabízíme detektivní služby soukromým osobám, firmám i právním kancelářím, více než 30 let.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
@@ -31,9 +31,9 @@ export default function Home() {
               </Link>
               <a 
                 href="#kontakt" 
-                className="inline-flex justify-center items-center px-8 py-4 bg-white text-ink border border-gray-300 rounded-full font-medium hover:border-ink hover:bg-gray-50 transition-all text-lg shadow-sm"
+                className="inline-flex justify-center items-center px-8 py-4 bg-white text-ink border border-gray-300 rounded-full font-medium hover:border-ink hover:bg-gray-50 transition-all text-lg shadow-sm text-center"
               >
-                Konzultace zdarma
+                Konzultace v případě navázání<br className="hidden sm:block"/> spolupráce zdarma
               </a>
             </div>
           </div>
@@ -83,12 +83,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl sm:text-5xl font-serif mb-8 leading-tight">
-                Zjišťování, prověřování a analýza informací
+              <h2 className="text-4xl sm:text-5xl font-serif mb-10 leading-tight">
+                Zjišťování, prověřování<br/>a analýza informací
               </h2>
-              <p className="text-gray-200 text-xl mb-10 leading-relaxed">
-                Aby jste měli jistotu, že firma nabízející detektivní služby má příslušná oprávnění, navštivte internetové stránky živnostenského rejstříku.
-              </p>
               <div className="space-y-6 text-gray-300 text-lg">
                 <div className="flex gap-4">
                   <div className="w-1.5 h-1.5 rounded-full bg-white mt-2.5 flex-shrink-0" />
@@ -124,13 +121,19 @@ export default function Home() {
 
                   <div className="space-y-8">
                     <div>
-                      <div className="text-6xl font-serif mb-2">1992</div>
+                      <div className="text-6xl font-serif mb-2">1995</div>
                       <div className="text-gray-400 uppercase tracking-widest text-xs font-bold">Rok založení praxe</div>
                     </div>
                     <div className="w-full h-px bg-white/10" />
-                    <div>
-                      <div className="text-4xl font-serif mb-2">ČKBS</div>
-                      <div className="text-gray-400 uppercase tracking-widest text-xs font-bold">Člen prezídia</div>
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <div className="text-4xl font-serif mb-2">ČKBS</div>
+                        <div className="text-gray-400 uppercase tracking-widest text-xs font-bold">Člen prezídia</div>
+                      </div>
+                      <div>
+                        <div className="text-4xl font-serif mb-2">ČKDS</div>
+                        <div className="text-gray-400 uppercase tracking-widest text-xs font-bold">Čestný člen</div>
+                      </div>
                     </div>
                   </div>
                </div>
