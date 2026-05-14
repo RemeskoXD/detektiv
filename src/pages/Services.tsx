@@ -5,7 +5,7 @@ export default function Services() {
     "Pátrání po osobách a věcech",
     "Zjišťování, prověřování a analýza informací, včetně jejich zobrazení v grafické analýze vztahů a vazeb, provedení syntézy dat s jejich následným popisem v souhrnné zprávě – nezbytné k přijímání důležitých rozhodnutí, prevenci a ochraně proti podvodům, vzniku nedobytných pohledávek a jiných nestandardních a nežádoucích situací, včetně fatálních škod",
     "Odhalování a dokumentace protiprávního jednání",
-    "Ochrana ekonomických zájmů fyzických a právnických osob (prověřování potencionálních obchodních partnerů, úkony související s řešením pohledávek po splatnosti, zjištění bonity dlužníka a stanovení efektivního způsobu vymáhání pohledávek, odhalování a dokumentace nekalosoutěžního jednání, atp.)",
+    "Ochrana ekonomických zájmů fyzických a právnických osob (prověřování potenciálních obchodních partnerů, úkony související s řešením pohledávek po splatnosti, zjištění bonity dlužníka a stanovení efektivního způsobu vymáhání pohledávek, odhalování a dokumentace nekalosoutěžního jednání, atp.)",
     "Detektivní dohled, monitorování osob a věcí, k nimž má klient právní vztah",
     "Systematické hledání důkazů",
     "Analýza důkazů a jejich organizace",
@@ -48,10 +48,10 @@ export default function Services() {
                   Jakmile se rozhodnete mne kontaktovat s konkrétní poptávkou na detektivní služby, vezměte prosím v úvahu fakt, že v zájmu zvýšení efektivity práce soukromého detektiva na zakázce, je nutno dbát na provedení pečlivé přípravy.
                 </p>
                 <p>
-                  Její první a nejdůležitější fází je pohovor s Vámi, při němž by jste měli poskytnout maximální součinnost při předávání vstupních (prvotních) informací a neměli by jste zamlčet ani zdánlivě nepodstatné informace.
+                  Její první a nejdůležitější fází je pohovor s Vámi, při němž byste měli poskytnout maximální součinnost při předávání vstupních (prvotních) informací a neměli byste zamlčet ani zdánlivě nepodstatné informace.
                 </p>
                 <p>
-                  Druhou fázi je provedení analýzy a zpracování prvotních informací, s naplánováním konkrétních úkonů. Dojde tak k úspoře času (není třeba zjišťovat již známe skutečnosti) a především peněz klienta.
+                  Druhou fází je provedení analýzy a zpracování prvotních informací s naplánováním konkrétních úkonů. Dojde tak k úspoře času (není třeba zjišťovat již známé skutečnosti) a především peněz klienta.
                 </p>
                 <p className="font-semibold text-white mt-8 text-base">
                   Proto si prosím k případu připravte všechny dostupné podklady a informace. Předem děkuji a těším se na spolupráci.

@@ -10,15 +10,15 @@ export default function About() {
         <div className="bg-white rounded-[2rem] shadow-sm border border-gray-100 p-8 sm:p-12 md:p-16">
           <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-ink prose-p:text-gray-800 prose-p:leading-relaxed">
             <p className="text-2xl text-ink font-medium mb-12 leading-relaxed">
-              V oboru komerční bezpečnosti a detektivních služeb pracuji od roku 1992. Začínal jsem nejprve jako zaměstnanec, od roku 1995 už pracuji jako osvč. Hlavní náplní mé činností je vyhledávání a monitorování osob, majetku, zjišťování informací a získávání důkazního materiálu.
+              V oboru komerční bezpečnosti a detektivních služeb pracuji od roku 1992. Začínal jsem nejprve jako zaměstnanec, od roku 1995 už pracuji jako OSVČ. Hlavní náplní mé činnosti je vyhledávání a monitorování osob, majetku, zjišťování informací a získávání důkazního materiálu.
             </p>
             
             <p>
-              V oboru komerční bezpečnosti, jsem získal bohaté zkušenosti v oblasti ostrahy objektů se služebními psy, při poskytování služeb osobní ochrany, a také převozů cenností a finanční hotovosti.
+              V oboru komerční bezpečnosti jsem získal bohaté zkušenosti v oblasti ostrahy objektů se služebními psy, při poskytování služeb osobní ochrany a také převozů cenností a finanční hotovosti.
             </p>
 
             <p>
-              V roce 2005 jsem se stal členem profesního sdružení Česká komora detektivních služeb. V současné době jsem také členem Českého klubu bezpečnostních služeb, kde pracuji v prezidiu, jako hospodář a vedoucí sekce detektivové. Působím zároveň v Hospodářské komoře ČR, jako člen bezpečnostní sekce a vedoucí pracovní skupiny detektivové.
+              V roce 2005 jsem se stal členem profesního sdružení Česká komora detektivních služeb. V současné době jsem také členem Českého klubu bezpečnostních služeb, kde pracuji v prezidiu jako hospodář a vedoucí sekce detektivové. Působím zároveň v Hospodářské komoře ČR jako člen bezpečnostní sekce a vedoucí pracovní skupiny detektivové.
             </p>
 
             <p>
@@ -26,7 +26,7 @@ export default function About() {
             </p>
 
             <p>
-              Profesi soukromého detektiva jsem si zvolil, kromě jiného, proto, že se v ní mohu realizovat, jako osoba mající možnost komunikovat s lidmi, a pomáhat jim řešit složité situace. Na mé práci mne nejvíce baví její různorodost, a také možnost se nezávisle rozhodovat co, kdy, kde, jak, čím, proč a především pro koho, budu pracovat.
+              Profesi soukromého detektiva jsem si zvolil kromě jiného proto, že se v ní mohu realizovat jako osoba mající možnost komunikovat s lidmi a pomáhat jim řešit složité situace. Na mé práci mne nejvíce baví její různorodost a také možnost se nezávisle rozhodovat, co, kdy, kde, jak, čím, proč a především pro koho budu pracovat.
             </p>
 
             <p>

@@ -28,13 +28,13 @@ export default function Pricing() {
               </div>
               <div className="w-full h-px bg-gray-200 my-8"></div>
               <p className="m-0 text-gray-700 text-base leading-relaxed">
-                Vždy však záleží na dohodě s Vámi, při čemž je třeba vzít v úvahu, že výši odměny, vedle jiných specifických okolností, ovlivňuje především míra rizika, podstupovaného při plnění Vašeho zadání.
+                Vždy však záleží na dohodě s Vámi, přičemž je třeba vzít v úvahu, že výši odměny, vedle jiných specifických okolností, ovlivňuje především míra rizika podstupovaného při plnění Vašeho zadání.
               </p>
             </div>
 
             <h2 className="text-3xl mb-6">Transparentnost a kontrola nákladů</h2>
             <p>
-              Vzhledem k tomu, že většinou nelze dopředu stanovit konečnou výši ceny detektivní služby, osvědčil se postup spočívající ve stanovení <strong>„stropu“ na tzv. prvotní šetření</strong>, aby jste měli cenu za služby detektiva pod kontrolou.
+              Vzhledem k tomu, že většinou nelze dopředu stanovit konečnou výši ceny detektivní služby, osvědčil se postup spočívající ve stanovení <strong>„stropu“ na tzv. prvotní šetření</strong>, abyste měli cenu za služby detektiva pod kontrolou.
             </p>
             
             <p>
