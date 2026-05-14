@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Pricing from "./pages/Pricing";
 import Presentation from "./pages/Presentation";
+import Gdpr from "./pages/Gdpr";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -198,6 +199,7 @@ export default function Layout() {
           <Route path="/nabidka-sluzeb" element={<Services />} />
           <Route path="/ceny-sluzeb" element={<Pricing />} />
           <Route path="/prezentace-a-opravneni" element={<Presentation />} />
+          <Route path="/ochrana-udaju" element={<Gdpr />} />
         </Routes>
       </main>
       <Footer />
