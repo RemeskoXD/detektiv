@@ -5,24 +5,38 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-24 sm:py-32 overflow-hidden">
+      <section className="relative pt-12 pb-24 sm:pt-16 sm:pb-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white -z-10" />
         <div className="absolute right-0 top-0 w-1/2 h-full bg-accent/5 -skew-x-12 transform origin-top-right -z-10 hidden lg:block" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:w-2/3">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-widest mb-8">
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-widest mb-10">
               <Shield className="w-4 h-4" />
               Detektivní Agentura
             </span>
-            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-serif text-ink mb-6 tracking-tight leading-[0.9]">
-              Důvěřuj, Prověřuj,<br /> 
-              <span className="text-gray-400 italic">PŘEDCHÁZEJ.</span>
-            </h1>
+            
+            <div className="flex flex-col items-center justify-center mb-8">
+              {/* Zelený trojúhelník jako špička pyramidy (#005639) */}
+              <div className="w-[14rem] h-32 sm:w-[18.6rem] sm:h-40 mb-6" style={{ backgroundColor: '#005639', clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}></div>
+              
+              <h1 className="flex flex-col items-center font-serif text-ink tracking-tight w-full">
+                <span className="block text-[3rem] sm:text-[4rem] lg:text-[6rem] mb-4 text-gray-700 leading-none">Důvěřuj,</span>
+                <div className="w-36 sm:w-48 lg:w-[28.5rem] h-[2px] bg-gray-300 mb-4"></div>
+                
+                <span className="block text-[4rem] sm:text-[5rem] lg:text-[7rem] mb-4 text-gray-800 leading-none">Prověřuj,</span>
+                <div className="w-64 sm:w-80 lg:w-[38rem] h-[2px] bg-gray-300 mb-4"></div>
+                
+                <span className="block text-[3.5rem] sm:text-[4.5rem] lg:text-[5.3rem] font-black text-accent uppercase tracking-wide leading-none mb-4">PŘEDCHÁZEJ.</span>
+                
+                <div className="w-[20rem] sm:w-[30rem] lg:w-[44rem] h-2 sm:h-3 mb-2" style={{ backgroundColor: '#005639' }}></div>
+              </h1>
+            </div>
+
             <p className="text-xl sm:text-2xl text-gray-800 mb-10 max-w-2xl leading-relaxed">
               Diskrétnost, profesionalita a efektivnost. Nabízíme detektivní služby soukromým osobám, firmám i právním kancelářím, více než 30 let.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
               <Link 
                 to="/nabidka-sluzeb" 
                 className="inline-flex justify-center items-center px-8 py-4 bg-ink text-white rounded-full font-medium hover:bg-accent transition-all hover:scale-105 active:scale-95 text-lg"
@@ -31,7 +45,7 @@ export default function Home() {
               </Link>
               <a 
                 href="#kontakt" 
-                className="inline-flex justify-center items-center px-8 py-4 bg-white text-ink border border-gray-300 rounded-full font-medium hover:border-ink hover:bg-gray-50 transition-all text-lg shadow-sm text-center"
+                className="inline-flex justify-center items-center px-8 py-4 bg-white text-ink border border-gray-300 rounded-full font-medium hover:border-ink hover:bg-gray-50 transition-all text-lg shadow-sm"
               >
                 Konzultace v případě navázání<br className="hidden sm:block"/> spolupráce zdarma
               </a>

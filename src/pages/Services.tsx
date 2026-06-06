@@ -2,15 +2,15 @@ import { Check } from "lucide-react";
 
 export default function Services() {
   const servicesList = [
-    "Pátrání po osobách a věcech",
-    "Zjišťování, prověřování a analýza informací, včetně jejich zobrazení v grafické analýze vztahů a vazeb, provedení syntézy dat s jejich následným popisem v souhrnné zprávě – nezbytné k přijímání důležitých rozhodnutí, prevenci a ochraně proti podvodům, vzniku nedobytných pohledávek a jiných nestandardních a nežádoucích situací, včetně fatálních škod",
-    "Odhalování a dokumentace protiprávního jednání",
-    "Ochrana ekonomických zájmů fyzických a právnických osob (prověřování potenciálních obchodních partnerů, úkony související s řešením pohledávek po splatnosti, zjištění bonity dlužníka a stanovení efektivního způsobu vymáhání pohledávek, odhalování a dokumentace nekalosoutěžního jednání, atp.)",
-    "Detektivní dohled, monitorování osob a věcí, k nimž má klient právní vztah",
-    "Systematické hledání důkazů",
-    "Analýza důkazů a jejich organizace",
-    "Shromažďování podkladů (informace, důkazní materiál) pro svědectví v soudním řízení",
-    "Zajištění OTP prohlídky proti odposlechům (kanceláře, byty, auta, atp.)"
+    { text: "Pátrání po osobách a věcech", highlight: false },
+    { text: "Zjišťování, prověřování a analýza informací, včetně jejich zobrazení v grafické analýze vztahů a vazeb, provedení syntézy dat s jejich následným popisem v souhrnné zprávě – nezbytné k přijímání důležitých rozhodnutí, prevenci a ochraně proti podvodům, vzniku nedobytných pohledávek a jiných nestandardních a nežádoucích situací, včetně fatálních škod", highlight: true },
+    { text: "Odhalování a dokumentace protiprávního jednání", highlight: false },
+    { text: "Ochrana ekonomických zájmů fyzických a právnických osob (prověřování potenciálních obchodních partnerů, úkony související s řešením pohledávek po splatnosti, zjištění bonity dlužníka a stanovení efektivního způsobu vymáhání pohledávek, odhalování a dokumentace nekalosoutěžního jednání, atp.)", highlight: false },
+    { text: "Detektivní dohled, monitorování osob a věcí, k nimž má klient právní vztah", highlight: false },
+    { text: "Systematické hledání důkazů", highlight: false },
+    { text: "Analýza důkazů a jejich organizace", highlight: false },
+    { text: "Shromažďování podkladů (informace, důkazní materiál) pro svědectví v soudním řízení", highlight: false },
+    { text: "Zajištění OTP prohlídky proti odposlechům (kanceláře, byty, auta, atp.)", highlight: false }
   ];
 
   return (
@@ -31,7 +31,9 @@ export default function Services() {
                   <div className="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
                     <Check className="w-4 h-4 text-accent" />
                   </div>
-                  <p className="text-gray-800 leading-relaxed text-lg">{service}</p>
+                  <p className={`leading-relaxed text-lg transition-all ${service.highlight ? 'font-bold text-ink bg-accent/5 p-4 rounded-xl border border-accent/20 -mt-2' : 'text-gray-800'}`}>
+                    {service.text}
+                  </p>
                 </li>
               ))}
             </ul>
