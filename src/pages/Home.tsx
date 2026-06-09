@@ -5,13 +5,13 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative pt-12 pb-24 sm:pt-16 sm:pb-32 overflow-hidden">
+      <section className="relative pt-8 pb-16 sm:pt-12 sm:pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white -z-10" />
         <div className="absolute right-0 top-0 w-1/2 h-full bg-accent/5 -skew-x-12 transform origin-top-right -z-10 hidden lg:block" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-widest mb-10">
+            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-widest mb-6 sm:mb-8">
               <Shield className="w-4 h-4" />
               Detektivní Agentura
             </span>
@@ -19,7 +19,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center mb-8">
               {/* Strom života jako špička pyramidy (symbol důvěry a ochrany) */}
               <svg 
-                className="w-[clamp(10rem,29vw,18.6rem)] h-auto mb-4 md:mb-8" 
+                className="w-[clamp(8rem,16vw,12.5rem)] h-auto mb-3 md:mb-5" 
                 viewBox="0 0 400 320" 
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -78,20 +78,20 @@ export default function Home() {
                 </g>
               </svg>
               
-              <h1 className="flex flex-col items-center font-serif text-ink tracking-tight w-full mt-4">
-                <span className="block text-[clamp(2.5rem,9.3vw,6rem)] mb-2 md:mb-4 text-gray-700 leading-none">Důvěřuj,</span>
-                <div className="w-[clamp(10rem,44.5vw,28.5rem)] h-[2px] bg-gray-300 mb-3 md:mb-5"></div>
+              <h1 className="flex flex-col items-center font-serif text-ink tracking-tight w-full mt-2">
+                <span className="block text-[clamp(2.2rem,4.8vw,4rem)] mb-1.5 md:mb-2 text-gray-700 leading-none">Důvěřuj,</span>
+                <div className="w-[clamp(10rem,24vw,19rem)] h-[2px] bg-gray-300 mb-2 md:mb-4"></div>
                 
-                <span className="block text-[clamp(3.2rem,10.9vw,7rem)] mb-2 md:mb-4 text-gray-800 leading-none">Prověřuj,</span>
-                <div className="w-[clamp(14rem,59.3vw,38rem)] h-[2px] bg-gray-300 mb-3 md:mb-5"></div>
+                <span className="block text-[clamp(2.8rem,6vw,5rem)] mb-1.5 md:mb-2 text-gray-800 leading-none">Prověřuj,</span>
+                <div className="w-[clamp(14rem,33vw,26rem)] h-[2px] bg-gray-300 mb-2 md:mb-4"></div>
                 
-                <span className="block text-[clamp(2.4rem,8.2vw,5.3rem)] font-black text-accent uppercase tracking-wide leading-none mb-3 md:mb-5">PŘEDCHÁZEJ.</span>
+                <span className="block text-[clamp(2rem,4.5vw,3.6rem)] font-black text-accent uppercase tracking-wide leading-none mb-2 md:mb-4">PŘEDCHÁZEJ.</span>
                 
-                <div className="w-[clamp(17rem,68.7vw,44rem)] h-2 md:h-3 mb-2 min-w-16" style={{ backgroundColor: '#005639' }}></div>
+                <div className="w-[clamp(16rem,42vw,33rem)] h-2 md:h-[0.6rem] mb-2 min-w-16 rounded-full" style={{ backgroundColor: '#005639' }}></div>
               </h1>
             </div>
 
-            <p className="text-xl sm:text-2xl text-gray-800 mb-10 max-w-2xl leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-800 mb-8 max-w-2xl leading-relaxed">
               Diskrétnost, profesionalita a efektivnost. Nabízíme detektivní služby soukromým osobám, firmám i právním kancelářím, více než 30 let.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
