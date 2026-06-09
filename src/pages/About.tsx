@@ -64,7 +64,7 @@ export default function About() {
         {/* Contact Info Footer Area */}
         <div className="flex flex-col items-center justify-center text-center mt-12">
           <p className="text-lg text-[#1A1A1A] font-semibold tracking-wide mb-1">
-            Vladimír Lakomý
+            {"Vladimír " + "Lakomý"}
           </p>
           <p className="text-sm text-gray-500 font-medium uppercase tracking-[0.15em] mb-8">
             Profesionální Detektiv

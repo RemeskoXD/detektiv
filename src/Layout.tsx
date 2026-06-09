@@ -1,5 +1,5 @@
 import { Routes, Route, Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail, Shield, Check } from "lucide-react";
+import { Menu, X, Phone, Mail, Shield, Check, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 
 // Components
@@ -110,6 +110,8 @@ const Navbar = () => {
 };
 
 const Footer = () => {
+  const [showBilling, setShowBilling] = useState(false);
+
   return (
     <footer className="bg-ink text-white py-16 mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -170,10 +172,23 @@ const Footer = () => {
           <div>
             <h3 className="font-serif text-2xl mb-6">Fakturační údaje</h3>
             <div className="text-gray-400 space-y-2 text-sm">
-              <p className="text-white font-medium text-base">Vladimír Lakomý</p>
-              <p>IČO: 63006791</p>
-              <p>Savín 54, Litovel</p>
-              <p>783 24, okres Olomouc</p>
+              {!showBilling ? (
+                <button 
+                  onClick={() => setShowBilling(true)}
+                  className="px-4 py-3 bg-white/5 hover:bg-white/10 rounded-md transition-colors border border-white/10 text-gray-300 w-full text-left flex justify-between items-center group"
+                  aria-expanded="false"
+                >
+                  <span className="font-medium tracking-wide">Zobrazit údaje</span>
+                  <ChevronDown className="w-5 h-5 text-gray-500 group-hover:text-white transition-colors" />
+                </button>
+              ) : (
+                <div className="bg-white/5 border border-white/10 rounded-md p-5 space-y-2 animate-in fade-in slide-in-from-top-2 duration-300">
+                  <p className="text-white font-medium text-base mb-3">{"Vladimír " + "Lakomý"}</p>
+                  <p>IČO: {"6300" + "6791"}</p>
+                  <p>Savín 5{"4, " + "Litovel"}</p>
+                  <p>{"783 " + "24, "}okres Olomouc</p>
+                </div>
+              )}
             </div>
           </div>
         </div>

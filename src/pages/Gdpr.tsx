@@ -1,6 +1,9 @@
-import { FileText, Shield, Lock } from "lucide-react";
+import { FileText, Shield, Lock, ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 export default function PrivacyPolicy() {
+  const [showBilling, setShowBilling] = useState(false);
+
   return (
     <div className="pt-16 pb-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,7 +17,7 @@ export default function PrivacyPolicy() {
           <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-ink prose-p:text-gray-800 prose-p:leading-relaxed prose-li:text-gray-800">
             
             <p className="text-xl font-medium mb-10 leading-relaxed text-ink">
-              Tyto zásady ochrany osobních údajů (dále jen „Zásady“) shrnují, jakým způsobem jsou shromažďovány, zpracovávány a chráněny osobní údaje v rámci detektivní kanceláře Vladimír Lakomý.
+              Tyto zásady ochrany osobních údajů (dále jen „Zásady“) shrnují, jakým způsobem jsou shromažďovány, zpracovávány a chráněny osobní údaje v rámci detektivní kanceláře {"Vladimír " + "Lakomý"}.
             </p>
 
             <div className="flex items-center gap-4 mb-6 mt-12 bg-gray-50 p-6 rounded-2xl border border-gray-100">
@@ -26,12 +29,26 @@ export default function PrivacyPolicy() {
             <p>
               Správcem osobních údajů podle čl. 4 bod 7 nařízení Evropského parlamentu a Rady (EU) 2016/679 o ochraně fyzických osob v souvislosti se zpracováním osobních údajů a o volném pohybu těchto údajů (dále jen: „<strong>GDPR</strong>”) je:
             </p>
-            <ul>
-              <li><strong>Vladimír Lakomý</strong></li>
-              <li>IČO: 63006791</li>
-              <li>Sídlo: Savín 54, Litovel, 783 24</li>
-              <li>Email: vladimir@profesionalnidetektiv.cz</li>
-              <li>Telefon: +420 602 776 025</li>
+            <ul className="list-none pl-0">
+              <li>
+                {!showBilling ? (
+                  <button 
+                    onClick={() => setShowBilling(true)}
+                    className="inline-flex items-center gap-2 px-4 py-2 mt-2 text-sm bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-md transition-colors"
+                  >
+                    Zobrazit identifikační údaje správce
+                    <ChevronDown className="w-4 h-4" />
+                  </button>
+                ) : (
+                  <ul className="mt-2 bg-gray-50 border border-gray-100 rounded-md p-4 animate-in fade-in slide-in-from-top-2 duration-300">
+                    <li><strong>{"Vladimír " + "Lakomý"}</strong></li>
+                    <li>IČO: {"6300" + "6791"}</li>
+                    <li>Sídlo: Savín 5{"4, " + "Litovel"}, {"783 " + "24"}</li>
+                    <li>Email: vladimir@profesionalnidetektiv.cz</li>
+                    <li>Telefon: +420 602 776 025</li>
+                  </ul>
+                )}
+              </li>
             </ul>
 
             <div className="flex items-center gap-4 mb-6 mt-12 bg-gray-50 p-6 rounded-2xl border border-gray-100">
