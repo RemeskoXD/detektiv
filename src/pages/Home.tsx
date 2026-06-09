@@ -17,19 +17,77 @@ export default function Home() {
             </span>
             
             <div className="flex flex-col items-center justify-center mb-8">
-              {/* Zelený trojúhelník jako špička pyramidy (#005639) */}
-              <div className="w-[14rem] h-32 sm:w-[18.6rem] sm:h-40 mb-6" style={{ backgroundColor: '#005639', clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}></div>
+              {/* Strom života jako špička pyramidy (symbol důvěry a ochrany) */}
+              <svg 
+                className="w-[clamp(10rem,29vw,18.6rem)] h-auto mb-4 md:mb-8" 
+                viewBox="0 0 400 320" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <path id="leaf" d="M 0 -24 C 18 -8, 18 16, 0 24 C -18 16, -18 -8, 0 -24 Z" />
+                </defs>
+            
+                <path 
+                  d="M 200 320 
+                     C 192 290 190 280 190 260 
+                     C 188 240 170 240 150 236 
+                     C 130 232 108 238 95 245 
+                     C 95 245 105 230 125 225 
+                     C 150 220 175 230 185 240 
+                     C 192 247 195 255 200 265 
+                     C 205 255 208 247 215 240 
+                     C 225 230 250 220 275 225 
+                     C 295 230 305 245 305 245 
+                     C 292 238 270 232 250 236 
+                     C 230 240 212 240 210 260 
+                     C 210 280 208 290 200 320 Z" 
+                  fill="#005639" 
+                />
+                <path d="M 130 315 C 160 305 240 305 270 315 C 240 310 160 310 130 315 Z" fill="#005639" />
+            
+                <g>
+                   <use href="#leaf" x="200" y="30" fill="#aed581" />
+                   
+                   <use href="#leaf" x="165" y="65" fill="#8bc34a" transform="rotate(-30 165 65)" />
+                   <use href="#leaf" x="200" y="75" fill="#cddc39" />
+                   <use href="#leaf" x="235" y="65" fill="#8bc34a" transform="rotate(30 235 65)" />
+            
+                   <use href="#leaf" x="130" y="105" fill="#7cb342" transform="rotate(-45 130 105)" />
+                   <use href="#leaf" x="165" y="115" fill="#aed581" transform="rotate(-15 165 115)" />
+                   <use href="#leaf" x="235" y="115" fill="#aed581" transform="rotate(15 235 115)" />
+                   <use href="#leaf" x="270" y="105" fill="#7cb342" transform="rotate(45 270 105)" />
+            
+                   <use href="#leaf" x="100" y="145" fill="#689f38" transform="rotate(-60 100 145)" />
+                   <use href="#leaf" x="140" y="155" fill="#9ccc65" transform="rotate(-30 140 155)" />
+                   <use href="#leaf" x="180" y="125" fill="#8bc34a" />
+                   <use href="#leaf" x="220" y="125" fill="#8bc34a" />
+                   <use href="#leaf" x="260" y="155" fill="#9ccc65" transform="rotate(30 260 155)" />
+                   <use href="#leaf" x="300" y="145" fill="#689f38" transform="rotate(60 300 145)" />
+            
+                   <use href="#leaf" x="75" y="185" fill="#558b2f" transform="rotate(-75 75 185)" />
+                   <use href="#leaf" x="120" y="195" fill="#7cb342" transform="rotate(-45 120 195)" />
+                   <use href="#leaf" x="160" y="175" fill="#aed581" transform="rotate(-15 160 175)" />
+                   <use href="#leaf" x="200" y="160" fill="#cddc39" />
+                   <use href="#leaf" x="240" y="175" fill="#aed581" transform="rotate(15 240 175)" />
+                   <use href="#leaf" x="280" y="195" fill="#7cb342" transform="rotate(45 280 195)" />
+                   <use href="#leaf" x="325" y="185" fill="#558b2f" transform="rotate(75 325 185)" />
+            
+                   <use href="#leaf" x="175" y="210" fill="#8bc34a" transform="rotate(-30 175 210)" />
+                   <use href="#leaf" x="225" y="210" fill="#8bc34a" transform="rotate(30 225 210)" />
+                   <use href="#leaf" x="200" y="195" fill="#689f38" />
+                </g>
+              </svg>
               
-              <h1 className="flex flex-col items-center font-serif text-ink tracking-tight w-full">
-                <span className="block text-[3rem] sm:text-[4rem] lg:text-[6rem] mb-4 text-gray-700 leading-none">Důvěřuj,</span>
-                <div className="w-36 sm:w-48 lg:w-[28.5rem] h-[2px] bg-gray-300 mb-4"></div>
+              <h1 className="flex flex-col items-center font-serif text-ink tracking-tight w-full mt-4">
+                <span className="block text-[clamp(2.5rem,9.3vw,6rem)] mb-2 md:mb-4 text-gray-700 leading-none">Důvěřuj,</span>
+                <div className="w-[clamp(10rem,44.5vw,28.5rem)] h-[2px] bg-gray-300 mb-3 md:mb-5"></div>
                 
-                <span className="block text-[4rem] sm:text-[5rem] lg:text-[7rem] mb-4 text-gray-800 leading-none">Prověřuj,</span>
-                <div className="w-64 sm:w-80 lg:w-[38rem] h-[2px] bg-gray-300 mb-4"></div>
+                <span className="block text-[clamp(3.2rem,10.9vw,7rem)] mb-2 md:mb-4 text-gray-800 leading-none">Prověřuj,</span>
+                <div className="w-[clamp(14rem,59.3vw,38rem)] h-[2px] bg-gray-300 mb-3 md:mb-5"></div>
                 
-                <span className="block text-[3.5rem] sm:text-[4.5rem] lg:text-[5.3rem] font-black text-accent uppercase tracking-wide leading-none mb-4">PŘEDCHÁZEJ.</span>
+                <span className="block text-[clamp(2.4rem,8.2vw,5.3rem)] font-black text-accent uppercase tracking-wide leading-none mb-3 md:mb-5">PŘEDCHÁZEJ.</span>
                 
-                <div className="w-[20rem] sm:w-[30rem] lg:w-[44rem] h-2 sm:h-3 mb-2" style={{ backgroundColor: '#005639' }}></div>
+                <div className="w-[clamp(17rem,68.7vw,44rem)] h-2 md:h-3 mb-2 min-w-16" style={{ backgroundColor: '#005639' }}></div>
               </h1>
             </div>
 
