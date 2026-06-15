@@ -161,7 +161,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">E-mail</div>
-                  <a href="mailto:vladimir@profesionalnidetektiv.cz" className="text-lg hover:text-gray-300 transition-colors">
+                  <a href="mailto:vladimir@profesionalnidetektiv.cz" className="text-base sm:text-lg hover:text-gray-300 transition-colors break-all">
                     vladimir@profesionalnidetektiv.cz
                   </a>
                 </div>
