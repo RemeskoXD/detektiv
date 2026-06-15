@@ -34,7 +34,7 @@ const Navbar = () => {
             <Link to="/">
               <img
                 className="h-16 w-auto"
-                src="https://profesionalnidetektiv.cz/wp-content/uploads/2022/03/logostin04.png"
+                src="https://web2.itnahodinu.cz/detektiv/logostin04.png"
                 alt="Profesionální Detektiv"
               />
             </Link>
@@ -118,7 +118,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <img
-              src="https://profesionalnidetektiv.cz/wp-content/uploads/2022/03/logostin04.png"
+              src="https://web2.itnahodinu.cz/detektiv/logostin04.png"
               alt="Logo"
               className="h-12 bg-white p-2 rounded mb-6 grayscale hover:grayscale-0 transition-all"
             />

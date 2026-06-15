@@ -183,7 +183,7 @@ export default function Home() {
                   {/* Bílé logo v horní části */}
                   <div className="flex items-center justify-center flex-grow pb-12 pt-4">
                     <img 
-                      src="https://profesionalnidetektiv.cz/wp-content/uploads/2022/03/logostin04.png" 
+                      src="https://web2.itnahodinu.cz/detektiv/logostin04.png" 
                       alt="Profesionální detektiv Logo" 
                       className="w-3/4 max-w-[200px] opacity-70 drop-shadow-md"
                       style={{ filter: "brightness(0) invert(1)" }}

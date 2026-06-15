@@ -1,4 +1,4 @@
-import { Award, FileText, BadgeCheck, ShieldAlert, Target, Shield } from "lucide-react";
+import { Award, FileText, BadgeCheck, ShieldAlert, Target, Shield, Search, Globe, Crosshair } from "lucide-react";
 
 export default function Presentation() {
   const certificates = [
@@ -6,37 +6,37 @@ export default function Presentation() {
       title: "Člen ČKDS",
       description: "Česká komora detektivních služeb. Od roku 2005 člen profesního sdružení a regionální zmocněnec pro Olomoucký kraj.",
       icon: <Target className="w-6 h-6 text-ink" />,
-      image: "https://profesionalnidetektiv.cz/wp-content/uploads/2022/03/certifikat-clena-ckds.jpg"
+      image: "https://web2.itnahodinu.cz/detektiv/certifikat-clena-ckds.jpg"
     },
     {
       title: "Členství v hospodářské komoře",
       description: "Zapsán a aktivní v profesních sdruženích.",
       icon: <BadgeCheck className="w-6 h-6 text-ink" />,
-      image: "https://profesionalnidetektiv.cz/wp-content/uploads/2022/03/osvedceni-clenstvi-v-hk.jpg"
+      image: "https://web2.itnahodinu.cz/detektiv/osvedceni-clenstvi-v-hk.jpg"
     },
     {
       title: "Manažer bezpečnostní služby",
       description: "Osvědčení pro management a řízení bezpečnostních složek.",
       icon: <ShieldAlert className="w-6 h-6 text-ink" />,
-      image: "https://profesionalnidetektiv.cz/wp-content/uploads/2022/03/osvedceni-hospkomory.jpg"
+      image: "https://web2.itnahodinu.cz/detektiv/osvedceni-hospkomory.jpg"
     },
     {
       title: "Detektivní specialista",
       description: "Certifikace pro výkon odborné detektivní činnosti.",
       icon: <Search className="w-6 h-6 text-ink" />,
-      image: "https://profesionalnidetektiv.cz/wp-content/uploads/2022/03/osvedceni-detektiv-spec.jpg"
+      image: "https://web2.itnahodinu.cz/detektiv/osvedceni-detektiv-spec.jpg"
     },
     {
       title: "Mezinárodní bezpečnost",
       description: "Certifikát znalostí pro oblast mezinárodní bezpečnosti.",
       icon: <Globe className="w-6 h-6 text-ink" />,
-      image: "https://profesionalnidetektiv.cz/wp-content/uploads/2022/03/osvedceni-mezin-konf.jpg"
+      image: "https://web2.itnahodinu.cz/detektiv/osvedceni-mezin-konf.jpg"
     },
     {
       title: "Znalost zbraní",
       description: "Oprávnění a zkoušky předepsané pro nakládání a manipulaci se zbraněmi.",
       icon: <Crosshair className="w-6 h-6 text-ink" />,
-      image: "https://profesionalnidetektiv.cz/wp-content/uploads/2022/03/seminar-zak-o-zbranich.jpg"
+      image: "https://web2.itnahodinu.cz/detektiv/seminar-zak-o-zbranich.jpg"
     }
   ];
 
