@@ -11,8 +11,8 @@ export default function Home() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold uppercase tracking-widest mb-6 sm:mb-8">
-              <Shield className="w-4 h-4" />
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm sm:text-base font-semibold uppercase tracking-widest mb-6 sm:mb-8">
+              <Shield className="w-5 h-5" />
               Detektivní Agentura
             </span>
             
