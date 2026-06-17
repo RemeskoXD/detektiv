@@ -52,9 +52,6 @@ export default function Services() {
                 <p>
                   Její první a nejdůležitější fází je pohovor s Vámi, při němž byste měli poskytnout maximální součinnost při předávání vstupních (prvotních) informací a neměli byste zamlčet ani zdánlivě nepodstatné informace.
                 </p>
-                <p>
-                  Druhou fází je provedení analýzy a zpracování prvotních informací s naplánováním konkrétních úkonů. Dojde tak k úspoře času (není třeba zjišťovat již známé skutečnosti) a především peněz klienta.
-                </p>
                 <p className="font-semibold text-white mt-8 text-base">
                   Proto si prosím k případu připravte všechny dostupné podklady a informace. Předem děkuji a těším se na spolupráci.
                 </p>

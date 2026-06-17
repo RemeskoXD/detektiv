@@ -3,10 +3,24 @@ import { Award, FileText, BadgeCheck, ShieldAlert, Target, Shield, Search, Globe
 export default function Presentation() {
   const certificates = [
     {
+      title: "Člen ČKBS",
+      description: "Český klub bezpečnostních služeb z.s. - platné osvědčení o členství.",
+      icon: <Shield className="w-6 h-6 text-ink" />,
+      image: "https://web2.itnahodinu.cz/detektiv/1.webp",
+      link: "https://ckbs.cz/"
+    },
+    {
+      title: "Člen bezpečnostních služeb",
+      description: "Osvědčení o členství v Hospodářské komoře České republiky prostřednictvím ČKBS.",
+      icon: <Award className="w-6 h-6 text-ink" />,
+      image: "https://web2.itnahodinu.cz/detektiv/2.webp"
+    },
+    {
       title: "Člen ČKDS",
       description: "Česká komora detektivních služeb. Od roku 2005 člen profesního sdružení a regionální zmocněnec pro Olomoucký kraj.",
       icon: <Target className="w-6 h-6 text-ink" />,
-      image: "https://web2.itnahodinu.cz/detektiv/certifikat-clena-ckds.jpg"
+      image: "https://web2.itnahodinu.cz/detektiv/certifikat-clena-ckds.jpg",
+      link: "https://ckds.cz/"
     },
     {
       title: "Členství v hospodářské komoře",
@@ -18,7 +32,7 @@ export default function Presentation() {
       title: "Manažer bezpečnostní služby",
       description: "Osvědčení pro management a řízení bezpečnostních složek.",
       icon: <ShieldAlert className="w-6 h-6 text-ink" />,
-      image: "https://web2.itnahodinu.cz/detektiv/osvedceni-hospkomory.jpg"
+      image: "https://web2.itnahodinu.cz/detektiv/4.jpg"
     },
     {
       title: "Detektivní specialista",
@@ -76,7 +90,15 @@ export default function Presentation() {
                   {cert.icon}
                 </div>
               </a>
-              <h2 className="text-2xl font-serif mb-3 leading-tight text-ink">{cert.title}</h2>
+              <h2 className="text-2xl font-serif mb-3 leading-tight text-ink">
+                {cert.link ? (
+                  <a href={cert.link} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-accent transition-colors">
+                    {cert.title}
+                  </a>
+                ) : (
+                  cert.title
+                )}
+              </h2>
               <p className="text-gray-700 text-lg leading-relaxed flex-grow">{cert.description}</p>
             </div>
           ))}
