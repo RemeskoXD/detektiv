@@ -4,14 +4,14 @@ export default function Presentation() {
   const certificates = [
     {
       title: "Člen ČKBS",
-      description: "Český klub bezpečnostních služeb z.s. - platné osvědčení o členství.",
+      description: "Osvědčení o členství v Hospodářské komoře České republiky prostřednictvím ČKBS.",
       icon: <Shield className="w-6 h-6 text-ink" />,
       image: "https://web2.itnahodinu.cz/detektiv/1.webp",
       link: "https://ckbs.cz/"
     },
     {
       title: "Člen bezpečnostních služeb",
-      description: "Osvědčení o členství v Hospodářské komoře České republiky prostřednictvím ČKBS.",
+      description: "Český klub bezpečnostních služeb z.s. - platné osvědčení o členství.",
       icon: <Award className="w-6 h-6 text-ink" />,
       image: "https://web2.itnahodinu.cz/detektiv/2.webp"
     },
