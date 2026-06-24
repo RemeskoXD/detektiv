@@ -7,7 +7,7 @@ export default function Home() {
 
   if (loading || !data) return <div className="p-20 text-center">Načítání...</div>;
 
-  const heroTitleLines = data.heroTitle.split('\n');
+  const heroTitleLines = (data.heroTitle || "").split('\n');
 
   return (
     <div>

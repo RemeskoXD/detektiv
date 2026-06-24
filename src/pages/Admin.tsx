@@ -19,7 +19,7 @@ export default function Admin() {
   const handleLogin = (e: FormEvent) => {
     e.preventDefault();
     if (password) {
-      setEditData(JSON.parse(JSON.stringify(data)));
+      setEditData(data ? JSON.parse(JSON.stringify(data)) : {});
       setIsAuthenticated(true);
     }
   };
@@ -163,7 +163,7 @@ export default function Admin() {
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Nadpis (oddělte řádky Enterem)</label>
               <textarea
-                value={editData.heroTitle}
+                value={editData?.heroTitle || ""}
                 onChange={(e) => setEditData({ ...editData, heroTitle: e.target.value })}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg h-32"
               />
@@ -171,7 +171,7 @@ export default function Admin() {
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Popis</label>
               <textarea
-                value={editData.heroDescription}
+                value={editData?.heroDescription || ""}
                 onChange={(e) => setEditData({ ...editData, heroDescription: e.target.value })}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg h-24"
               />
@@ -182,7 +182,7 @@ export default function Admin() {
         <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
           <h2 className="text-xl font-medium mb-4">Kvalifikace (Prezentace)</h2>
           <div className="space-y-6">
-            {editData.certificates.map((cert: any, index: number) => (
+            {editData?.certificates?.map((cert: any, index: number) => (
               <div key={index} className="p-4 bg-white border border-gray-200 rounded-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
