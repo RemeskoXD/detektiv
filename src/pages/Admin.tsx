@@ -34,7 +34,13 @@ export default function Admin() {
       });
       
       if (!response.ok) {
-        throw new Error("Neplatné heslo nebo chyba serveru");
+        if (response.status === 405) {
+          throw new Error("Ukládání není povoleno (405). Běží web jako statická stránka bez Node.js backendu?");
+        }
+        if (response.status === 401) {
+          throw new Error("Neplatné heslo");
+        }
+        throw new Error(`Chyba serveru: ${response.status}`);
       }
       
       setStatus("success");

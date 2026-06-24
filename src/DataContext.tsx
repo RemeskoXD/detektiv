@@ -127,6 +127,10 @@ export function DataProvider({ children }: { children: ReactNode }) {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
+      const contentType = response.headers.get("content-type");
+      if (!contentType || !contentType.includes("application/json")) {
+        throw new Error("Server returned non-JSON response (likely a static fallback)");
+      }
       const json = await response.json();
       setData(json);
     } catch (error) {
