@@ -1,7 +1,14 @@
 import { Shield, Target, Search, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useData } from "../DataContext";
 
 export default function Home() {
+  const { data, loading } = useData();
+
+  if (loading || !data) return <div className="p-20 text-center">Načítání...</div>;
+
+  const heroTitleLines = data.heroTitle.split('\n');
+
   return (
     <div>
       {/* Hero Section */}
@@ -79,20 +86,31 @@ export default function Home() {
               </svg>
               
               <h1 className="flex flex-col items-center font-serif text-ink tracking-tight w-full mt-2">
-                <span className="block text-[clamp(2.2rem,4.8vw,4rem)] mb-1.5 md:mb-2 text-gray-700 leading-none">Důvěřuj,</span>
-                <div className="w-[clamp(10rem,24vw,19rem)] h-[2px] bg-gray-300 mb-2 md:mb-4"></div>
+                {heroTitleLines[0] && (
+                  <>
+                    <span className="block text-[clamp(2.2rem,4.8vw,4rem)] mb-1.5 md:mb-2 text-gray-700 leading-none">{heroTitleLines[0]}</span>
+                    <div className="w-[clamp(10rem,24vw,19rem)] h-[2px] bg-gray-300 mb-2 md:mb-4"></div>
+                  </>
+                )}
                 
-                <span className="block text-[clamp(2.8rem,6vw,5rem)] mb-1.5 md:mb-2 text-gray-800 leading-none">Prověřuj,</span>
-                <div className="w-[clamp(14rem,33vw,26rem)] h-[2px] bg-gray-300 mb-2 md:mb-4"></div>
+                {heroTitleLines[1] && (
+                  <>
+                    <span className="block text-[clamp(2.8rem,6vw,5rem)] mb-1.5 md:mb-2 text-gray-800 leading-none">{heroTitleLines[1]}</span>
+                    <div className="w-[clamp(14rem,33vw,26rem)] h-[2px] bg-gray-300 mb-2 md:mb-4"></div>
+                  </>
+                )}
                 
-                <span className="block text-[clamp(2rem,4.5vw,3.6rem)] font-black text-accent uppercase tracking-wide leading-none mb-2 md:mb-4">PŘEDCHÁZEJ.</span>
-                
-                <div className="w-[clamp(16rem,42vw,33rem)] h-2 md:h-[0.6rem] mb-2 min-w-16 rounded-full" style={{ backgroundColor: '#005639' }}></div>
+                {heroTitleLines[2] && (
+                  <>
+                    <span className="block text-[clamp(2rem,4.5vw,3.6rem)] font-black text-accent uppercase tracking-wide leading-none mb-2 md:mb-4">{heroTitleLines[2]}</span>
+                    <div className="w-[clamp(16rem,42vw,33rem)] h-2 md:h-[0.6rem] mb-2 min-w-16 rounded-full" style={{ backgroundColor: '#005639' }}></div>
+                  </>
+                )}
               </h1>
             </div>
 
-            <p className="text-lg sm:text-xl text-gray-800 mb-8 max-w-2xl leading-relaxed">
-              Diskrétnost, profesionalita a efektivnost. Nabízíme detektivní služby soukromým osobám, firmám i právním kancelářím, více než 30 let.
+            <p className="text-lg sm:text-xl text-gray-800 mb-8 max-w-2xl leading-relaxed whitespace-pre-wrap">
+              {data.heroDescription}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center w-full">
               <Link 

@@ -1,58 +1,23 @@
 import { Award, FileText, BadgeCheck, ShieldAlert, Target, Shield, Search, Globe, Crosshair } from "lucide-react";
+import { useData } from "../DataContext";
+
+const iconMap: Record<string, any> = {
+  "Shield": Shield,
+  "Award": Award,
+  "Target": Target,
+  "BadgeCheck": BadgeCheck,
+  "ShieldAlert": ShieldAlert,
+  "Search": Search,
+  "Globe": Globe,
+  "Crosshair": Crosshair
+};
 
 export default function Presentation() {
-  const certificates = [
-    {
-      title: "Člen ČKBS",
-      description: "Osvědčení o členství v Hospodářské komoře České republiky prostřednictvím ČKBS.",
-      icon: <Shield className="w-6 h-6 text-ink" />,
-      image: "https://web2.itnahodinu.cz/detektiv/1.webp",
-      link: "https://ckbs.cz/"
-    },
-    {
-      title: "Člen bezpečnostních služeb",
-      description: "Český klub bezpečnostních služeb z.s. - platné osvědčení o členství.",
-      icon: <Award className="w-6 h-6 text-ink" />,
-      image: "https://web2.itnahodinu.cz/detektiv/2.webp"
-    },
-    {
-      title: "Člen ČKDS",
-      description: "Česká komora detektivních služeb. Od roku 2005 člen profesního sdružení a regionální zmocněnec pro Olomoucký kraj.",
-      icon: <Target className="w-6 h-6 text-ink" />,
-      image: "https://web2.itnahodinu.cz/detektiv/certifikat-clena-ckds.jpg",
-      link: "https://ckds.cz/"
-    },
-    {
-      title: "Členství v hospodářské komoře",
-      description: "Zapsán a aktivní v profesních sdruženích.",
-      icon: <BadgeCheck className="w-6 h-6 text-ink" />,
-      image: "https://web2.itnahodinu.cz/detektiv/osvedceni-clenstvi-v-hk.jpg"
-    },
-    {
-      title: "Manažer bezpečnostní služby",
-      description: "Osvědčení pro management a řízení bezpečnostních složek.",
-      icon: <ShieldAlert className="w-6 h-6 text-ink" />,
-      image: "https://web2.itnahodinu.cz/detektiv/4.jpg"
-    },
-    {
-      title: "Detektivní specialista",
-      description: "Certifikace pro výkon odborné detektivní činnosti.",
-      icon: <Search className="w-6 h-6 text-ink" />,
-      image: "https://web2.itnahodinu.cz/detektiv/osvedceni-detektiv-spec.jpg"
-    },
-    {
-      title: "Mezinárodní bezpečnost",
-      description: "Certifikát znalostí pro oblast mezinárodní bezpečnosti.",
-      icon: <Globe className="w-6 h-6 text-ink" />,
-      image: "https://web2.itnahodinu.cz/detektiv/osvedceni-mezin-konf.jpg"
-    },
-    {
-      title: "Znalost zbraní",
-      description: "Oprávnění a zkoušky předepsané pro nakládání a manipulaci se zbraněmi.",
-      icon: <Crosshair className="w-6 h-6 text-ink" />,
-      image: "https://web2.itnahodinu.cz/detektiv/seminar-zak-o-zbranich.jpg"
-    }
-  ];
+  const { data, loading } = useData();
+
+  if (loading || !data) return <div className="p-20 text-center">Načítání...</div>;
+
+  const certificates = data.certificates;
 
   return (
     <div className="pt-16 pb-24">
@@ -70,7 +35,9 @@ export default function Presentation() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {certificates.map((cert, idx) => (
+          {certificates.map((cert: any, idx: number) => {
+            const IconComponent = iconMap[cert.icon] || Shield;
+            return (
             <div key={idx} className="bg-white border border-gray-100 shadow-sm rounded-3xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 flex flex-col group">
               <a 
                 href={cert.image} 
@@ -87,7 +54,7 @@ export default function Presentation() {
                   />
                 </div>
                 <div className="absolute top-4 right-4 w-12 h-12 bg-white/90 backdrop-blur rounded-xl flex items-center justify-center shadow-sm">
-                  {cert.icon}
+                  <IconComponent className="w-6 h-6 text-ink" />
                 </div>
               </a>
               <h2 className="text-2xl font-serif mb-3 leading-tight text-ink">
@@ -101,7 +68,8 @@ export default function Presentation() {
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed flex-grow">{cert.description}</p>
             </div>
-          ))}
+          );
+        })}
         </div>
         
         <div className="mt-20 bg-ink text-white rounded-[2rem] p-10 sm:p-16 flex flex-col md:flex-row items-center justify-between gap-10 shadow-xl">
@@ -121,15 +89,4 @@ export default function Presentation() {
       </div>
     </div>
   );
-}
-
-// Quick icons fallback inside this file
-function Search(props: any) {
-  return <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>;
-}
-function Globe(props: any) {
-  return <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>;
-}
-function Crosshair(props: any) {
-  return <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>;
 }

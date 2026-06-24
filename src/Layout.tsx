@@ -1,6 +1,7 @@
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail, Shield, Check, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useData } from "./DataContext";
 
 // Components
 import Home from "./pages/Home";
@@ -9,10 +10,12 @@ import Services from "./pages/Services";
 import Pricing from "./pages/Pricing";
 import Presentation from "./pages/Presentation";
 import Gdpr from "./pages/Gdpr";
+import Admin from "./pages/Admin";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { data } = useData();
 
   useEffect(() => {
     setIsOpen(false);
@@ -57,11 +60,11 @@ const Navbar = () => {
           </div>
           <div className="hidden md:flex items-center">
             <a
-              href="tel:+420602776025"
+              href={`tel:${data?.contact?.phone?.replace(/\s/g, '')}`}
               className="inline-flex items-center gap-2 bg-ink text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-accent transition-colors"
             >
               <Phone className="w-4 h-4" />
-              602 776 025
+              {data?.contact?.phone}
             </a>
           </div>
           <div className="-mr-2 flex items-center md:hidden">
@@ -98,10 +101,10 @@ const Navbar = () => {
               </Link>
             ))}
             <a
-              href="tel:+420602776025"
+              href={`tel:${data?.contact?.phone?.replace(/\s/g, '')}`}
               className="block px-3 py-2 rounded-md text-base font-medium text-white bg-ink mt-4 text-center"
             >
-              +420 602 776 025
+              {data?.contact?.phone}
             </a>
           </div>
         </div>
@@ -112,6 +115,7 @@ const Navbar = () => {
 
 const Footer = () => {
   const [showBilling, setShowBilling] = useState(false);
+  const { data } = useData();
 
   return (
     <footer className="bg-ink text-white py-16 mt-24">
@@ -151,8 +155,8 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">Telefon</div>
-                  <a href="tel:+420602776025" className="text-lg hover:text-gray-300 transition-colors">
-                    +420 602 776 025
+                  <a href={`tel:${data?.contact?.phone?.replace(/\s/g, '')}`} className="text-lg hover:text-gray-300 transition-colors">
+                    {data?.contact?.phone}
                   </a>
                 </div>
               </li>
@@ -162,8 +166,8 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">E-mail</div>
-                  <a href="mailto:vladimir@profesionalnidetektiv.cz" className="text-[0.8rem] sm:text-sm hover:text-gray-300 transition-colors break-all">
-                    vladimir@profesionalnidetektiv.cz
+                  <a href={`mailto:${data?.contact?.email}`} className="text-[0.8rem] sm:text-sm hover:text-gray-300 transition-colors break-all">
+                    {data?.contact?.email}
                   </a>
                 </div>
               </li>
@@ -197,6 +201,7 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} Profesionální detektiv.</p>
           <div className="mt-4 md:mt-0 flex gap-6">
             <Link to="/ochrana-udaju" className="hover:text-white transition-colors">GDPR</Link>
+            <Link to="/admin" className="hover:text-white transition-colors">Admin</Link>
           </div>
         </div>
       </div>
@@ -216,6 +221,7 @@ export default function Layout() {
           <Route path="/ceny-sluzeb" element={<Pricing />} />
           <Route path="/prezentace-a-opravneni" element={<Presentation />} />
           <Route path="/ochrana-udaju" element={<Gdpr />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
       </main>
       <Footer />

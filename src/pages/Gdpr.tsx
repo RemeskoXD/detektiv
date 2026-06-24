@@ -1,8 +1,14 @@
 import { FileText, Shield, Lock, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { useData } from "../DataContext";
 
 export default function PrivacyPolicy() {
   const [showBilling, setShowBilling] = useState(false);
+  const { data, loading } = useData();
+
+  if (loading || !data || !data.contact) return <div className="p-20 text-center">Načítání...</div>;
+
+  const { contact } = data;
 
   return (
     <div className="pt-16 pb-24">
@@ -44,8 +50,8 @@ export default function PrivacyPolicy() {
                     <li><strong>{"Vladimír " + "Lakomý"}</strong></li>
                     <li>IČO: {"6300" + "6791"}</li>
                     <li>Sídlo: Savín 5{"4, " + "Litovel"}, {"783 " + "24"}</li>
-                    <li>Email: vladimir@profesionalnidetektiv.cz</li>
-                    <li>Telefon: +420 602 776 025</li>
+                    <li>Email: {contact.email}</li>
+                    <li>Telefon: {contact.phone}</li>
                   </ul>
                 )}
               </li>
