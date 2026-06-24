@@ -23,8 +23,6 @@ RUN npm ci --omit=dev
 
 # Copy the built artifacts from the builder stage
 COPY --from=builder /app/dist ./dist
-# Copy the initial data.json file
-COPY --from=builder /app/data.json ./data.json
 
 # Expose port 3000 which is used by our Express server
 EXPOSE 3000
